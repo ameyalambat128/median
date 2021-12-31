@@ -2,4 +2,4 @@
 
 Created a decentralized chat application using Nextjs, Tailwind CSS and Moralis.
 
-[website]: median.vercel.app
+[website]: https://median.vercel.app/
