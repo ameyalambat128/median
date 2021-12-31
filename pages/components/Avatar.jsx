@@ -6,7 +6,7 @@ const Avatar = ({ username, logoutOnClick }) => {
 
   return (
     <Image
-      className="rounded-full bg-black cursor-pointer hover:opacity-75"
+      className="rounded-full bg-black cursor-pointer hover:opacity-75 "
       src={`https://avatars.dicebear.com/api/identicon/${
         username || user.get("username")
       }.svg`}
