@@ -19,8 +19,10 @@ const Header = () => {
           <div className="relative h-48 w-48 lg:mx-auto">
             <Avatar logoutOnClick />
           </div>
-          <h1 className="text-3xl ">Welcome to Median</h1>
-          <h2 className="text-5xl truncate">{user.getUsername()}</h2>
+          <h1 className="font-source text-3xl ">Welcome to Median</h1>
+          <h2 className="font-source text-5xl truncate p-1">
+            {user.getUsername()}
+          </h2>
 
           <ChangeUsername />
         </div>

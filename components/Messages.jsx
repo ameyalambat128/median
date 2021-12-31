@@ -24,7 +24,7 @@ const Messages = () => {
   );
 
   return (
-    <div className="pb-56">
+    <div className="font-source pb-56">
       <div className="space-y-10 p-4">
         {data.map((message) => (
           <Message key={message.id} message={message} />
@@ -35,7 +35,7 @@ const Messages = () => {
       </div>
       <div
         ref={endOfMessagesRef}
-        className="text-base font-light text-center text-gray-900 mt-5 "
+        className="font-source text-base font-light text-center text-gray-900 mt-5 "
       >
         <p>You're up to date {user.getUsername()}! 🎊</p>
       </div>

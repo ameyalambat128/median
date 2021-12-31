@@ -1,5 +1,5 @@
 import Head from "next/head";
-
+import logo from "./../assets/logo.png";
 import Login from "../components/Login";
 import { useMoralis } from "react-moralis";
 import Header from "../components/Header";
@@ -9,14 +9,21 @@ export default function Home() {
   const { isAuthenticated } = useMoralis();
 
   if (!isAuthenticated) {
-    return <Login />;
+    return (
+      <>
+        <Head>
+          <title>Median</title>
+          <link rel="icon" href="./logo.png" />
+        </Head>
+        <Login />
+      </>
+    );
   }
   return (
-    <div className="h-screen bg-gradient-to-b from-red-300 to-red-100 overflow-hidden">
+    <div className="h-screen font-source bg-gradient-to-b from-red-300 to-red-100 overflow-hidden">
       <Head>
-        <title>Dapp Chat</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <title>Median</title>
+        <link rel="icon" href="./logo.png" />
       </Head>
 
       <div className="h-screen overflow-y-scroll">

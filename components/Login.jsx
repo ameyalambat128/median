@@ -23,7 +23,7 @@ const Login = () => {
 
         <button
           onClick={authenticate}
-          className="bg-red-300 p-4 font-sans font-medium rounded-lg shadow-lg hover:brightness-110 transition-all ease-in-out hover:px-10 "
+          className="font-source bg-red-300 p-4 font-medium rounded-lg shadow-lg hover:brightness-110 transition-all ease-in-out hover:px-10 "
         >
           Login to MEDIAN
         </button>
