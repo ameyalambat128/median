@@ -9,13 +9,13 @@ const Header = () => {
   const { user } = useMoralis();
 
   return (
-    <div className="text-white">
-      <div className="">
-        <div className="relative h-24 w-24">
-          <Image src={logo} alt="logo" layout="responsive" objectFit="" />
+    <div className="text-white sticky p-5 z-50 bg-gray-900 rounded-xl shadow-2xl">
+      <div className="grid grid-cols-5 lg:grid-cols-6 items-end lg:item-center">
+        <div className="relative h-34 w-20 mx-auto hidden lg:inline-grid">
+          <Image src={logo} className="" layout="" objectFit="cover" />
         </div>
 
-        <div className="">
+        <div className="col-span-4 text-left lg:text-center">
           <div className="relative h-48 w-48 lg:mx-auto">
             <Avatar logoutOnClick />
           </div>
