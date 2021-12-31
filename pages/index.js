@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
 
       <div className="h-screen overflow-y-scroll">
-        <div className="pt-3 px-1 max-w-screen-2xl mx-auto">
+        <div className="max-w-screen-2xl mx-auto">
           <Header />
           <Messages />
         </div>

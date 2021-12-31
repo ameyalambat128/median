@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useMoralis } from "react-moralis";
 import { FaGripLinesVertical } from "react-icons/fa";
 
-const SendMessage = () => {
+const SendMessage = ({ endOfMessagesRef }) => {
   const { user, Moralis } = useMoralis();
   const [message, setMessage] = useState("");
   const sendMessage = (e) => {
@@ -26,7 +26,11 @@ const SendMessage = () => {
           console.log(error.message);
         }
       );
+    endOfMessagesRef.current.scrollIntoView({ behavior: "smooth" });
+
+    setMessage("");
   };
+
   return (
     <form className="flex fixed bottom-10 bg-gray-900 opacity-75 w-11/12 px-6 py-4 max-w-2xl rounded-xl shadow-2xl ">
       <input
