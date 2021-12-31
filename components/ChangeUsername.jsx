@@ -11,7 +11,7 @@ const ChangeUsername = () => {
   };
   return (
     <div className="">
-      <div className="text-sm absolute top-5 right-10">
+      <div className="font-source text-sm absolute top-5 right-10">
         <button
           disabled={isUserUpdating}
           onClick={setUsername}
