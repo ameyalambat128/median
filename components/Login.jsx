@@ -1,6 +1,6 @@
 import Image from "next/image";
-import background from "../../assets/bg.jpg";
-import logo from "../../assets/logo.png";
+import background from "../assets/bg.jpg";
+import logo from "../assets/logo.png";
 import { useMoralis } from "react-moralis";
 import React, { useState } from "react";
 

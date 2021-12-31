@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useMoralis } from "react-moralis";
 
-import logo from "../../assets/logo.png";
+import logo from "../assets/logo.png";
 import Avatar from "./Avatar";
 import ChangeUsername from "./ChangeUsername";
 
