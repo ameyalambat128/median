@@ -22,7 +22,7 @@ const Message = ({ message }) => {
         className={`flex space-x-4 p-3 rounded-md ${
           isUserMessage
             ? "rounded-br-none bg-red-400"
-            : "rounded-br-none bg-gray-400"
+            : "rounded-br-none bg-blue-400"
         }`}
       >
         <p className="">{message.get("message")}</p>
