@@ -10,7 +10,7 @@ const ChangeUsername = () => {
     setUserData({ username });
   };
   return (
-    <div className="">
+    <div>
       <div className="font-source text-sm absolute top-5 right-10">
         <button
           disabled={isUserUpdating}
