@@ -8,8 +8,8 @@ import Messages from "../components/Messages";
 export default function Home() {
   const { isAuthenticated } = useMoralis();
 
-  if (!isAuthenticated) {
-    return (
+  {
+    !isAuthenticated && (
       <>
         <Head>
           <title>Median</title>
