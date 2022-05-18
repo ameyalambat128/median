@@ -2,9 +2,9 @@ import { useState } from "react";
 import { useMoralis } from "react-moralis";
 import { FaGripLinesVertical } from "react-icons/fa";
 
-const SendMessage = ({ endOfMessagesRef }) => {
+const SendMessage = ({ endOfMessagesRef, message, setter }) => {
   const { user, Moralis } = useMoralis();
-  const [message, setMessage] = useState("");
+  // const [message, setMessage] = useState("");
   const sendMessage = (e) => {
     e.preventDefault();
     if (!message) return;
@@ -27,9 +27,13 @@ const SendMessage = ({ endOfMessagesRef }) => {
         }
       );
     endOfMessagesRef.current.scrollIntoView({ behavior: "smooth" });
-
-    setMessage("");
+    setter("");
   };
+  // a - 0 = red
+  // b - 1 = blue
+  // c - 2 = green
+  // d - 0 = red
+  // e - 1 = blue
 
   return (
     <form className="flex fixed bottom-10 bg-gray-900 opacity-75 w-11/12 px-6 py-4 max-w-2xl rounded-xl shadow-2xl ">
@@ -38,7 +42,7 @@ const SendMessage = ({ endOfMessagesRef }) => {
         className="flex-grow outline-none bg-transparent text-white  placeholder-slate-400 pr-5"
         placeholder={`Enter your Message ${user.getUsername()}...`}
         value={message}
-        onChange={(e) => setMessage(e.target.value)}
+        onChange={(e) => setter(e.target.value)}
       />
       <div className="flex items-center justify-center px-4">
         <FaGripLinesVertical className="text-2xl text-white right-2" />

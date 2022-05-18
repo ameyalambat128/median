@@ -5,7 +5,7 @@ import SendMessage from "./SendMessage";
 
 const MINS_DURATION = 30;
 
-const Messages = () => {
+const Messages = ({ message, setter }) => {
   const { user } = useMoralis();
   const endOfMessagesRef = useRef(null);
   const { data, loading, error } = useMoralisQuery(
@@ -31,7 +31,11 @@ const Messages = () => {
         ))}
       </div>
       <div className="flex justify-center">
-        <SendMessage endOfMessagesRef={endOfMessagesRef} />
+        <SendMessage
+          endOfMessagesRef={endOfMessagesRef}
+          message={message}
+          setter={setter}
+        />
       </div>
       <div
         ref={endOfMessagesRef}
